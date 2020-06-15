@@ -24,13 +24,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         buttonStart.layer.cornerRadius = 19
         
-        let path = Bundle.main.path(forResource: "Celestial", ofType: "mp3")!
-        let url = URL(fileURLWithPath: path)
-        do {
-            backgroundMusicPlayer =  try AVAudioPlayer(contentsOf: url)
-        } catch {
-            // can't load file
-        }
+        playMusic(title: "Celestial")
         backgroundMusicPlayer.numberOfLoops = -1
         backgroundMusicPlayer.prepareToPlay()
         backgroundMusicPlayer.play()
@@ -42,4 +36,18 @@ class ViewController: UIViewController {
 
 
 }
+
+extension UIViewController{
+    func playMusic(title: String){
+        let path = Bundle.main.path(forResource: title, ofType: "mp3")!
+        let url = URL(fileURLWithPath: path)
+        do {
+            backgroundMusicPlayer =  try AVAudioPlayer(contentsOf: url)
+        } catch {
+        // can't load file
+        }
+        
+    }
+}
+
 

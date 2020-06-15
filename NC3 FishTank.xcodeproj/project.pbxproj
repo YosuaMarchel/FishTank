@@ -22,6 +22,12 @@
 		7C863C5724972A8400027D69 /* ConfirmSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C863C5624972A8400027D69 /* ConfirmSelectionVC.swift */; };
 		7C863C5C249748D300027D69 /* Celestial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7C863C5B249748D300027D69 /* Celestial.mp3 */; };
 		7CE98263249751CB00143EDE /* StoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE98262249751CB00143EDE /* StoryVC.swift */; };
+		7CE982652497ED7200143EDE /* Red_Carpet_Wooden_Floor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CE982642497ED7200143EDE /* Red_Carpet_Wooden_Floor.mp3 */; };
+		7CE982672497F1A100143EDE /* VillageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE982662497F1A100143EDE /* VillageVC.swift */; };
+		7CE982692497F86500143EDE /* TavernVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE982682497F86500143EDE /* TavernVC.swift */; };
+		7CE9826B2497F87D00143EDE /* VillageChiefHouseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9826A2497F87D00143EDE /* VillageChiefHouseVC.swift */; };
+		7CE9826D2497F89200143EDE /* AdventurerGuildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9826C2497F89200143EDE /* AdventurerGuildVC.swift */; };
+		7CE9827324983A2000143EDE /* Nocturnal_Mysteries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7CE9827224983A2000143EDE /* Nocturnal_Mysteries.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		7C863C5624972A8400027D69 /* ConfirmSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSelectionVC.swift; sourceTree = "<group>"; };
 		7C863C5B249748D300027D69 /* Celestial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Celestial.mp3; sourceTree = "<group>"; };
 		7CE98262249751CB00143EDE /* StoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryVC.swift; sourceTree = "<group>"; };
+		7CE982642497ED7200143EDE /* Red_Carpet_Wooden_Floor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Red_Carpet_Wooden_Floor.mp3; sourceTree = "<group>"; };
+		7CE982662497F1A100143EDE /* VillageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageVC.swift; sourceTree = "<group>"; };
+		7CE982682497F86500143EDE /* TavernVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TavernVC.swift; sourceTree = "<group>"; };
+		7CE9826A2497F87D00143EDE /* VillageChiefHouseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageChiefHouseVC.swift; sourceTree = "<group>"; };
+		7CE9826C2497F89200143EDE /* AdventurerGuildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurerGuildVC.swift; sourceTree = "<group>"; };
+		7CE9827224983A2000143EDE /* Nocturnal_Mysteries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nocturnal_Mysteries.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,10 @@
 				7C863C4B2496D49800027D69 /* PickClassVC.swift */,
 				7C863C5624972A8400027D69 /* ConfirmSelectionVC.swift */,
 				7CE98262249751CB00143EDE /* StoryVC.swift */,
+				7CE982662497F1A100143EDE /* VillageVC.swift */,
+				7CE982682497F86500143EDE /* TavernVC.swift */,
+				7CE9826A2497F87D00143EDE /* VillageChiefHouseVC.swift */,
+				7CE9826C2497F89200143EDE /* AdventurerGuildVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -113,7 +129,9 @@
 		7C863C5D249748D900027D69 /* Background Music */ = {
 			isa = PBXGroup;
 			children = (
+				7CE9827224983A2000143EDE /* Nocturnal_Mysteries.mp3 */,
 				7C863C5B249748D300027D69 /* Celestial.mp3 */,
+				7CE982642497ED7200143EDE /* Red_Carpet_Wooden_Floor.mp3 */,
 			);
 			path = "Background Music";
 			sourceTree = "<group>";
@@ -180,8 +198,10 @@
 				7C863C5524971BEA00027D69 /* Weiholmir_regular.ttf in Resources */,
 				7C6599E72492418600A3FD90 /* LaunchScreen.storyboard in Resources */,
 				7C863C5324971BE500027D69 /* pixelmix_bold.ttf in Resources */,
+				7CE9827324983A2000143EDE /* Nocturnal_Mysteries.mp3 in Resources */,
 				7C6599E42492418600A3FD90 /* Assets.xcassets in Resources */,
 				7C6599E22492418500A3FD90 /* Main.storyboard in Resources */,
+				7CE982652497ED7200143EDE /* Red_Carpet_Wooden_Floor.mp3 in Resources */,
 				7C863C5424971BE700027D69 /* pixelmix.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,10 +216,14 @@
 				7C863C4C2496D49800027D69 /* PickClassVC.swift in Sources */,
 				7C6599DF2492418500A3FD90 /* ViewController.swift in Sources */,
 				7CE98263249751CB00143EDE /* StoryVC.swift in Sources */,
+				7CE982672497F1A100143EDE /* VillageVC.swift in Sources */,
+				7CE9826D2497F89200143EDE /* AdventurerGuildVC.swift in Sources */,
 				7C6599DB2492418500A3FD90 /* AppDelegate.swift in Sources */,
 				7C863C492496C90A00027D69 /* InitialPageVC.swift in Sources */,
 				7C863C4E2496DBB200027D69 /* TextFlow.swift in Sources */,
 				7C6599DD2492418500A3FD90 /* SceneDelegate.swift in Sources */,
+				7CE982692497F86500143EDE /* TavernVC.swift in Sources */,
+				7CE9826B2497F87D00143EDE /* VillageChiefHouseVC.swift in Sources */,
 				7C863C5724972A8400027D69 /* ConfirmSelectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

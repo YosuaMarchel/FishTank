@@ -15,6 +15,8 @@ class ConfirmSelectionVC: UIViewController {
     @IBOutlet weak var imageClass: UIImageView!
     @IBOutlet weak var labelClass: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var buttonYes: UIButton!
+    @IBOutlet weak var buttonNo: UIButton!
     
     var charSelection: String = ""
     var indexSelected: Int = 0
@@ -22,6 +24,10 @@ class ConfirmSelectionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonYes.layer.cornerRadius = 19
+        buttonNo.layer.cornerRadius = 19
+        
         if charSelection == "fighter"{
             imageClass.image = UIImage(named: "Fighter")
             labelClass.text = "Fighter"

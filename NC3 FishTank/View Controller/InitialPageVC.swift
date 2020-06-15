@@ -15,7 +15,7 @@ class InitialPageVC: UIViewController {
     @IBOutlet weak var textProlog3: UILabel!
     @IBOutlet weak var textInsertName: UILabel!
     
-    @IBOutlet weak var fieldInsetName: UITextField!
+    @IBOutlet weak var fieldInsertName: UITextField!
     
     @IBOutlet weak var buttonNext1: UIButton!
     @IBOutlet weak var buttonNext2: UIButton!
@@ -27,6 +27,12 @@ class InitialPageVC: UIViewController {
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.hideKeyboardWhenTappedAround()
+
+        view.addGestureRecognizer(tap)
+        
         buttonNext1.layer.cornerRadius = 19
         buttonNext2.layer.cornerRadius = 19
         buttonNext3.layer.cornerRadius = 19
@@ -34,7 +40,7 @@ class InitialPageVC: UIViewController {
         
         textInsertName.isHidden = true
         
-        fieldInsetName.isHidden = true
+        fieldInsertName.isHidden = true
         buttonContinue.isHidden = true
         
         buttonNext2.isHidden = true
@@ -68,20 +74,58 @@ class InitialPageVC: UIViewController {
         buttonNext3.isHidden = true
         
         textInsertName.isHidden = false
-        fieldInsetName.isHidden = false
+        fieldInsertName.isHidden = false
         buttonContinue.isHidden = false
     }
     
     @IBAction func clickButtonContinue(_ sender: UIButton) {
-        textInsertName.isHidden = true
-        fieldInsetName.isHidden = true
-        buttonContinue.isHidden = true
-                
+        if fieldInsertName.text == ""{
+            warning()
+        }else{
+            textInsertName.isHidden = true
+            fieldInsertName.isHidden = true
+            buttonContinue.isHidden = true
+            charName = fieldInsertName.text!
+        }
     }
     
     override var shouldAutorotate: Bool {
         return true
     }
     
+    func warning(){
+        let alert = UIAlertController(title: "Warning", message: "You cannot leave your name empty", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
     
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+            if self.view.frame.origin.y != 0 {
+                self.view.frame.origin.y = 0
+            }
+        }
+    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

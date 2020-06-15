@@ -75,7 +75,9 @@ class PickClassVC: UIViewController {
     }
     
     @IBAction func clickButtonStartAdventure(_ sender: Any) {
-        backgroundMusicPlayer.stop()
+//        backgroundMusicPlayer.stop()
+        playMusic(title: "Red_Carpet_Wooden_Floor")
+        backgroundMusicPlayer.play()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
