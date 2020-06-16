@@ -14,14 +14,12 @@ var charName: String = ""
 var charClassSelection: String = ""
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var buttonStart: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-//        UIDevice.current.setValue(value, forKey: "orientation")
-        // Do any additional setup after loading the view.
+        
         buttonStart.layer.cornerRadius = 19
         
         playMusic(title: "Celestial")
@@ -29,12 +27,6 @@ class ViewController: UIViewController {
         backgroundMusicPlayer.prepareToPlay()
         backgroundMusicPlayer.play()
     }
-    
-//    override var shouldAutorotate: Bool {
-//        return true
-//    }
-
-
 }
 
 extension UIViewController{
@@ -44,9 +36,8 @@ extension UIViewController{
         do {
             backgroundMusicPlayer =  try AVAudioPlayer(contentsOf: url)
         } catch {
-        // can't load file
+            // can't load file
         }
-        
     }
 }
 

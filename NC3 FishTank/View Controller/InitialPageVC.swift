@@ -9,7 +9,7 @@
 import UIKit
 
 class InitialPageVC: UIViewController {
-
+    
     @IBOutlet weak var textProlog1: UILabel!
     @IBOutlet weak var textProlog2: UILabel!
     @IBOutlet weak var textProlog3: UILabel!
@@ -30,7 +30,7 @@ class InitialPageVC: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         self.hideKeyboardWhenTappedAround()
-
+        
         view.addGestureRecognizer(tap)
         
         buttonNext1.layer.cornerRadius = 19
@@ -49,7 +49,7 @@ class InitialPageVC: UIViewController {
         textProlog3.isHidden = true
         
         textProlog1.setTextWithTypeAnimation(typedText: textProlog1.text ?? "May the source be with you", characterInterval: 0.05)
-                
+        
         // Do any additional setup after loading the view.
     }
     
@@ -103,18 +103,18 @@ class InitialPageVC: UIViewController {
     
     
     @objc func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height
-                }
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
             }
         }
+    }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            }
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
         }
+    }
     
 }
 
@@ -124,7 +124,7 @@ extension UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

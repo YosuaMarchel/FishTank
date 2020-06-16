@@ -21,7 +21,7 @@ class ConfirmSelectionVC: UIViewController {
     var charSelection: String = ""
     var indexSelected: Int = 0
     var status = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

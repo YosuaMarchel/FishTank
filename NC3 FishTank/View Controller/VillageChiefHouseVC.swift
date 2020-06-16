@@ -21,10 +21,10 @@ class VillageChiefHouseVC: UIViewController {
     @IBOutlet weak var viewChat: UIView!
     
     var counterProgress: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imagePlayer.isHidden = true
         imageNPC.isHidden = true
         imageFace.isHidden = true
@@ -45,7 +45,6 @@ class VillageChiefHouseVC: UIViewController {
         }
         
         playMonolog(text: "You knock on the Village Chief's door. You hear Village Chief's voice from inside, telling you to wait.")
-        
     }
     
     @IBAction func clickButtonNext(_ sender: UIButton) {
@@ -97,7 +96,6 @@ class VillageChiefHouseVC: UIViewController {
             }
             performSegue(withIdentifier: "backToVillage2", sender: self)
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -137,5 +135,4 @@ class VillageChiefHouseVC: UIViewController {
         labelDialogNPC.isHidden = false
         labelDialogNPC.setTextWithTypeAnimation(typedText: text, characterInterval: 0.03)
     }
-    
 }

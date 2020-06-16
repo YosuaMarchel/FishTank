@@ -18,12 +18,12 @@ class VillageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         buttonTavern.layer.cornerRadius = 10
         buttonGuild.layer.cornerRadius = 10
         buttonChiefHouse.layer.cornerRadius = 10
-
-
+        
+        
         buttonChiefHouse.isEnabled = false
         buttonChiefHouse.alpha = 0.5
         buttonGuild.isEnabled = false

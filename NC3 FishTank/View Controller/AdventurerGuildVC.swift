@@ -25,7 +25,7 @@ class AdventurerGuildVC: UIViewController {
     @IBOutlet weak var labelNext: UILabel!
     
     var counterProgress: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +50,7 @@ class AdventurerGuildVC: UIViewController {
         }
         
         playMonolog(text: "You walk into the stone building that houses other adventurers.")
-
+        
         // Do any additional setup after loading the view.
     }
     

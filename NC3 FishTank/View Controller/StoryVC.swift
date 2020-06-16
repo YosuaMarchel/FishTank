@@ -9,7 +9,7 @@
 import UIKit
 
 class StoryVC: UIViewController {
-
+    
     @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var imageFace: UIImageView!
     @IBOutlet weak var imageNPC: UIImageView!
@@ -44,9 +44,7 @@ class StoryVC: UIViewController {
         }
         
         playMonolog(text: "You finally arrived at Deepwood Village.")
-
     }
-    
     
     @IBAction func clickButtonNext(_ sender: UIButton) {
         labelCharName.text = charName
@@ -72,7 +70,6 @@ class StoryVC: UIViewController {
         }else if labelDialogNPC.text == "Get some rest at the tavern first. Then you can gather some information about the raids that has been happening in this village."{
             performSegue(withIdentifier: "toVillageVC", sender: self)
         }
-        
     }
     
     func playMonolog (text: String){
@@ -106,8 +103,4 @@ class StoryVC: UIViewController {
         labelDialogNPC.isHidden = false
         labelDialogNPC.setTextWithTypeAnimation(typedText: text, characterInterval: 0.03)
     }
-    
-
-  
-
 }

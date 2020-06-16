@@ -29,7 +29,7 @@ class TavernVC: UIViewController {
     
     var counterProgress: Int = 0
     var counterQuestion: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +44,7 @@ class TavernVC: UIViewController {
         buttonQuestion1.layer.cornerRadius = 10
         buttonQuestion2.layer.cornerRadius = 10
         buttonQuestion3.layer.cornerRadius = 10
-
+        
         buttonQuestion1.isHidden = true
         buttonQuestion2.isHidden = true
         labelQuestion1.isHidden = true
@@ -64,7 +64,7 @@ class TavernVC: UIViewController {
         }
         
         playMonolog(text: "As you enter the tavern, you can see that it is crowded at the moment.")
-
+        
     }
     
     @IBAction func clickButtonNext(_ sender: UIButton) {

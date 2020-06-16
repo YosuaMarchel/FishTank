@@ -9,7 +9,7 @@
 import UIKit
 
 class PickClassVC: UIViewController {
-
+    
     @IBOutlet weak var buttonStartAdventure: UIButton!
     @IBOutlet weak var imageFighter: UIImageView!
     @IBOutlet weak var imageWizard: UIImageView!
@@ -55,7 +55,7 @@ class PickClassVC: UIViewController {
             buttonStartAdventure.isHidden = false
             charClassSelection = "cleric"
         }
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -75,7 +75,6 @@ class PickClassVC: UIViewController {
     }
     
     @IBAction func clickButtonStartAdventure(_ sender: Any) {
-//        backgroundMusicPlayer.stop()
         playMusic(title: "Red_Carpet_Wooden_Floor")
         backgroundMusicPlayer.play()
     }
