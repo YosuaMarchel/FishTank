@@ -50,7 +50,7 @@ class StoryVC: UIViewController {
     
     @IBAction func clickButtonNext(_ sender: UIButton) {
         labelCharName.text = charName
-        if labelMonolog.text == "You finally arrived at XYZ Village."{
+        if labelMonolog.text == "You finally arrived at Deepwood Village."{
             playMonolog(text: "You see someone waiting for you at the gate.")
         }else if labelMonolog.text == "You see someone waiting for you at the gate."{
             playDialogNPC(text: "Hello \(charName).")

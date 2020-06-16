@@ -989,8 +989,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background start screen" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-vy-enG">
                                 <rect key="frame" x="-152" y="0.0" width="1200" height="414"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-e2-DsU">
-                                <rect key="frame" x="198" y="177" width="500" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realm of Destiny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-e2-DsU">
+                                <rect key="frame" x="51" y="176" width="794" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ybz-e2-DsU" secondAttribute="height" multiplier="25:3" id="J3h-m5-wkP"/>
                                     <constraint firstAttribute="width" constant="500" id="YN6-0G-NsY"/>
@@ -1009,8 +1009,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSO-Xz-xgx">
-                                <rect key="frame" x="323" y="260.5" width="250" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSO-Xz-xgx">
+                                <rect key="frame" x="323" y="261.5" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.36078431372549019" green="0.23529411764705882" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="NyZ-Ta-yqW"/>
