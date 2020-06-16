@@ -43,7 +43,7 @@ class StoryVC: UIViewController {
             imageFace.image = UIImage(named: "ClericFace")
         }
         
-        playMonolog(text: "You finally arrived at XYZ Village.")
+        playMonolog(text: "You finally arrived at Deepwood Village.")
 
     }
     
