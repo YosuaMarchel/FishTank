@@ -17,6 +17,19 @@ func setTextWithTypeAnimation(typedText: String, characterInterval: TimeInterval
         for character in typedText {
             DispatchQueue.main.async {
                 self.text = self.text! + String(character)
+                let attributedString = NSMutableAttributedString(string: self.text ?? "")
+
+                // *** Create instance of `NSMutableParagraphStyle`
+                let paragraphStyle = NSMutableParagraphStyle()
+
+                // *** set LineSpacing property in points ***
+                paragraphStyle.lineSpacing = 5 // Whatever line spacing you want in points
+
+                // *** Apply attribute to string ***
+                attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+
+                // *** Set Attributed String to your label ***
+                self.attributedText = attributedString
             }
             Thread.sleep(forTimeInterval: characterInterval)
         }
